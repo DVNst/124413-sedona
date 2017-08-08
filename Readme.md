@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Виталий Дедюрин](https://up.htmlacademy.ru/htmlcss/18/user/124413).
-* Наставник: [Михаил Кононенко] (https://up.htmlacademy.ru/htmlcss/18/user/30979).
+* Наставник: [Михаил Кононенко](https://up.htmlacademy.ru/htmlcss/18/user/30979).
 
 ---
 
