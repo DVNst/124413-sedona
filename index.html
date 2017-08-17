@@ -8,15 +8,15 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
-		<header class="header-main">
+		<header class="header-main wrapper">
 			<nav class="navigation-main">
-				<a class="logo-main"><img src="img/logo.png" width="138" height="70" alt="sedona"></a>
+				<a class="logo-main"><img src="img/logo.svg" width="138" height="70" alt="sedona"></a>
 				
-				<ul>
+				<ul class="navigation-site">
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Фото и видео</a></li>
 					<li><a href="#">Карта штата</a></li>
-					<li><a href="#">Гостиницы</a></li>
+					<li><a href="hotels.html">Гостиницы</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -32,7 +32,7 @@
 		
 			<section class="features">
 				<div class="features__head wrapper">
-				 	<h1>Седона — небольшой городок в Аризоне,<br>
+				 	<h1>Седона &mdash; небольшой городок в Аризоне,<br>
 				 		заслуживающий большего!</h1>
 				 	<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 				</div>
@@ -41,7 +41,7 @@
 				 	<div  class="features__title features__title_blue col-x1">
 				 		<h2>Настоящий городок</h2>
 				 		<p>&mdash; №1 &mdash;</p>
-				 		<p>Седона — не атракцион для туристов, там течет своя жизнь</p>
+				 		<p>Седона &mdash; не атракцион для туристов, там течет своя жизнь</p>
 				 	</div>
 				 	<div class="features__img col-x2">
 				 		<!--<img src="img/features1.jpg" width="100%" height="auto" alt="Улица города">-->
@@ -108,36 +108,36 @@
 				
 			</section>
 
-			<section class="search-form" hidden>
+			<section class="search-form">
 				<h2 class="visually-hidden">Форма поиска гостиниц в Седоне</h2>
 				<form method="get">
 					<fieldset class="search-form__data">
 						<label for="data-begin">Дата заезда:</label>
 						<p class="search-form__input">
 							<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
-							<span class="search-form__btn-calendar">Календарь</span>
+							<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
 						</p>
 						
 						<label for="data-end">Дата выезда:</label>
 						<p class="search-form__input">
 							<input type="text" id="data-end" name="data-end" value="4 июля 2017">
-							<span class="search-form__btn-calendar">Календарь</span>
+							<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
 						</p>
 						
 					</fieldset>
 
 					<fieldset class="search-form__passenger">
 						<label for="adult">Взрослые:</label>
-						<p class="search-form__input">							
-							<input type="text" id="adult" name="adult" size="3" min="1" max="10" value="2">
-							<span class="search-form__btn-passenger">-</span>
-							<span class="search-form__btn-passenger">+</span>
+						<p class="search-form__input">
+							<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+							<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
+							<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
 						</p>
 						<label for="child">Дети:</label>
-						<p class="search-form__input">							
-							<input type="text" id="child" name="child" size="3" min="0" max="10" value="0">
-							<span class="search-form__btn-passenger">-</span>
-							<span class="search-form__btn-passenger">+</span>
+						<p class="search-form__input">
+							<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+							<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
+							<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
 						</p>
 					</fieldset>
 					<button class="btn btn-form" type="submit">Найти</button>
@@ -151,26 +151,28 @@
 					<img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
 				</div>
 			</section>
-
-			<footer class="footer-main">
-
-				<div class="hashtag">
-					<p>#VisitSedona</p>
-				</div>
-
-				<div class="footer-socials">
-					<a class="btn socials-btn socials-btn-tw" href="#">Twitter</a>
-					<a class="btn socials-btn socials-btn-fb" href="#">Facebook</a>
-					<a class="btn socials-btn socials-btn-yt" href="#">Youtube</a>
-				</div>
-
-				<div class="footer-copyright">
-					<p>website by</p>
-					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo_name.png" width="115" height="41" alt="HTML Academy"></a>
-				</div>
-
-			</footer>
-
 		</main>
+		
+		<footer class="footer-main">
+			
+			<div class="footer-hashtag">
+				<p>#VisitSedona</p>
+			</div>
+
+			<div class="footer-socials">
+				<a class="btn socials-btn socials-btn-tw" href="#">Twitter</a>
+				<a class="btn socials-btn socials-btn-fb" href="#">Facebook</a>
+				<a class="btn socials-btn socials-btn-yt" href="#">Youtube</a>
+			</div>
+
+			<div class="footer-copyright">
+				<p>website by</p>
+				<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" title="HTML Academy">
+					<!--<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">-->
+				</a>
+			</div>
+			
+		</footer>
+		
 	</body>
 </html>

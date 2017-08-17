@@ -8,15 +8,15 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
-		<header class="header-main">
+		<header class="header-main wrapper">
 			<nav class="navigation-main">
-				<a class="logo-main"><img src="img/logo.png" width="138" height="70" alt="sedona"></a>
+				<a href="index.html" class="logo-main"><img src="img/logo.svg" width="138" height="70" alt="sedona"></a>
 				
-				<ul>
+				<ul class="navigation-site">
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Фото и видео</a></li>
 					<li><a href="#">Карта штата</a></li>
-					<li class="navigation-main_active"><a>Гостиницы</a></li>
+					<li class="navigation-site_active"><a>Гостиницы</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -24,7 +24,7 @@
 		<main>
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтры поиска гостиниц в Седоне</h2>
-				<form action="">
+				<form action="https://echo.htmlacademy.ru">
 					<fieldset>
 						<legend>Инфраструктура:</legend>
 						<label>
@@ -137,20 +137,22 @@
 			</section>
 
 			<footer class="footer-main">
-
+				
 				<div class="hashtag">
 					<p>#VisitSedona</p>
 				</div>
 
 				<div class="footer-socials">
-					<a class="btn socials-btn socials-btn-tw"" href="#">Twitter</a>
-					<a class="btn socials-btn socials-btn-fb"" href="#">Facebook</a>
-					<a class="btn socials-btn socials-btn-yt"" href="#">Youtube</a>
+					<a class="btn socials-btn socials-btn-tw" href="#">Twitter</a>
+					<a class="btn socials-btn socials-btn-fb" href="#">Facebook</a>
+					<a class="btn socials-btn socials-btn-yt" href="#">Youtube</a>
 				</div>
 
 				<div class="footer-copyright">
 					<p>website by</p>
-					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo_name.png" width="115" height="41" alt="HTML Academy"></a>
+					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" title="HTML Academy">
+					<!--<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">-->
+					</a>
 				</div>
 
 			</footer>
