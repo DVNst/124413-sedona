@@ -24,11 +24,11 @@
 		<main>
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтры поиска гостиниц в Седоне</h2>
-				<form action="https://echo.htmlacademy.ru">
+				<form action="https://echo.htmlacademy.ru" class="wrapper">
 					<fieldset>
-						<legend>Инфраструктура:</legend>
+						<legend class="filters__title">Инфраструктура:</legend>
 						<label>
-							<input type="checkbox" name="Pool" checked> 
+							<input type="checkbox" name="pool" checked> 
 							Бассейн
 						</label>
 						<label>
@@ -42,7 +42,7 @@
 					</fieldset>
 
 					<fieldset>
-						<legend>Тип жилья:</legend>
+						<legend class="filters__title">Тип жилья:</legend>
 						<label>
 							<input type="checkbox" name="hotel" checked> 
 							Гостиница
@@ -56,15 +56,17 @@
 							Апартаменты
 						</label>
 					</fieldset>
-					<p>
-						<label>
-							Стоимость в сутки (Р):
-							<input type="text" value="0">
-							<input type="text" value="3000">
+
+					<fieldset>
+						<legend class="filters__title">Стоимость в сутки (Р):</legend>
+							<p class="filters__price">
+								<input type="text" name="price-min" placeholder="от 0" pattern="^[ 0-9]+$">
+								<input type="text" name="price-max" placeholder="до 3000" pattern="^[ 0-9]+$">
+							</p>
 							<input type="range" value="0">
 							<input type="range" value="3000">
-						</label>
-					</p>
+						</legend>
+					</fieldset>
 					<button class="btn btn-filter" type="submit">Показать</button>
 				</form>
 			</section>
@@ -72,8 +74,8 @@
 			<section class="sorting">
 				<h2>Найдено: <span>3</span></h2>
 
-				<div class="sorting__title">
-					<p>Сортировка:</p>
+				<div class="sorting__filters">
+					<h3>Сортировка:</h3>
 					<a class="btn-sort btn-sort_active" href="#">по цене</a>
 					<a class="btn-sort" href="#">по типу</a>
 					<a class="btn-sort" href="#">по рейтингу</a>
@@ -88,7 +90,7 @@
 				<article class="hotels__item">
 					<img src="img/hotel1.jpg" width="135" height="90" alt="Amara Resort & Spa">
 					<div>
-						<h3 class="hotels__name">Amara Resort &amp; Spa</h3>
+						<h3>Amara Resort &amp; Spa</h3>
 						<p class="hotels__type-price">
 							<span>Гостиница</span>
 							<span>от 4000 р.</span>
