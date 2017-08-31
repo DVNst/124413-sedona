@@ -8,7 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
-		<header class="header-main wrapper">
+		<header class="header-main">
 			<nav class="navigation-main">
 				<a class="logo-main"><img src="img/logo.svg" width="138" height="70" alt="sedona"></a>
 				
@@ -41,7 +41,7 @@
 				 	<div  class="features__title features__title_blue col-x1">
 				 		<h2>Настоящий городок</h2>
 				 		<p>&mdash; №1 &mdash;</p>
-				 		<p>Седона &mdash; не атракцион для туристов, там течет своя жизнь</p>
+				 		<p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
 				 	</div>
 				 	<div class="features__img col-x2">
 				 		<!--<img src="img/features1.jpg" width="100%" height="auto" alt="Улица города">-->
@@ -101,7 +101,8 @@
 				<h2 class="visually-hidden">Поиск гостиниц в Седоне</h2>
 				<div class="wrapper">
 					<b>Заинтересовались?</b>
-					<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+					<p>Укажите предполагаемые даты поездки,<br>
+					и мы покажем вам лучшие предложения гостиниц в седоне</p>
 				</div>
 				
 				<a class="btn btn-search-form" href="#">Поиск гостиницы в Седоне</a>
@@ -112,33 +113,39 @@
 				<h2 class="visually-hidden">Форма поиска гостиниц в Седоне</h2>
 				<form method="get">
 					<fieldset class="search-form__data">
-						<label for="data-begin">Дата заезда:</label>
-						<p class="search-form__input">
-							<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
-							<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
-						</p>
+						<div class="search-form-wrapper">
+							<label for="data-begin">Дата заезда:</label>
+							<p class="search-form__input">
+								<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
+								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
+							</p>
+						</div>
 						
-						<label for="data-end">Дата выезда:</label>
-						<p class="search-form__input">
-							<input type="text" id="data-end" name="data-end" value="4 июля 2017">
-							<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
-						</p>
+						<div class="search-form-wrapper">
+							<label for="data-end">Дата выезда:</label>
+							<p class="search-form__input">
+								<input type="text" id="data-end" name="data-end" value="4 июля 2017">
+								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
+							</p>
+						</div>
 						
 					</fieldset>
 
 					<fieldset class="search-form__passenger">
-						<label for="adult">Взрослые:</label>
-						<p class="search-form__input">
-							<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
-							<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
-							<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
-						</p>
-						<label for="child">Дети:</label>
-						<p class="search-form__input">
-							<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
-							<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
-							<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
-						</p>
+						<div class="search-form-wrapper">
+							<label for="adult">Взрослые:</label>
+							<p class="search-form__input">
+								<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+								<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
+								<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
+							</p>
+							<label for="child">Дети:</label>
+							<p class="search-form__input">
+								<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+								<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
+								<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
+							</p>
+						</div>
 					</fieldset>
 					<button class="btn btn-form" type="submit">Найти</button>
 				</form>
