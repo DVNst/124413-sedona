@@ -5,7 +5,7 @@
 		<title>HTML Academy: Седона</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header-main">
@@ -117,7 +117,7 @@
 							<label for="data-begin">Дата заезда:</label>
 							<p class="search-form__input">
 								<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
-								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
+								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
 							</p>
 						</div>
 						
@@ -125,7 +125,7 @@
 							<label for="data-end">Дата выезда:</label>
 							<p class="search-form__input">
 								<input type="text" id="data-end" name="data-end" value="4 июля 2017">
-								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar">Календарь</button>
+								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
 							</p>
 						</div>
 						
@@ -135,15 +135,23 @@
 						<div class="search-form-wrapper">
 							<label for="adult">Взрослые:</label>
 							<p class="search-form__input">
-								<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+								<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">
+									<span class="visually-hidden">Уменьшить взрослых</span>
+								</button>
 								<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
-								<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
+								<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">
+									<span class="visually-hidden">Увеличить взрослых</span>
+								</button>
 							</p>
 							<label for="child">Дети:</label>
 							<p class="search-form__input">
-								<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">-</button>
+								<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">
+									<span class="visually-hidden">Уменьшить детей</span>
+								</button>
 								<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
-								<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">+</button>
+								<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">
+									<span class="visually-hidden">Увеличить детей</span>
+								</button>
 							</p>
 						</div>
 					</fieldset>
@@ -152,10 +160,9 @@
 			</section>
 
 			<section class="map">
-				<h2 class="visually-hidden">Карта города Седоны и его окрестностей</h2>
-				<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209549.0634947392!2d-111.90508801948403!3d34.851098169123105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1502454546618" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-				<div class="map-img">
-					<img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
+				<h2 class="visually-hidden">Карта города Седоны и его окрестностей</h2>				
+				<div class="map-img" title="Карта Седоны">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209549.0634947392!2d-111.90508801948403!3d34.851098169123105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1502454546618" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</section>
 		</main>
@@ -167,9 +174,9 @@
 			</div>
 
 			<div class="footer-socials">
-				<a class="btn socials-btn socials-btn-tw" href="#">Twitter</a>
-				<a class="btn socials-btn socials-btn-fb" href="#">Facebook</a>
-				<a class="btn socials-btn socials-btn-yt" href="#">Youtube</a>
+				<a class="btn socials-btn socials-btn-tw" href="#" title="Twitter"><span class="visually-hidden">Twitter</span></a>
+				<a class="btn socials-btn socials-btn-fb" href="#" title="Facebook"><span class="visually-hidden">Facebook</span></a>
+				<a class="btn socials-btn socials-btn-yt" href="#" title="Youtube"><span class="visually-hidden">Youtube</span></a>
 			</div>
 
 			<div class="footer-copyright">

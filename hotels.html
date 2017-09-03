@@ -5,7 +5,7 @@
 		<title>HTML Academy: Седона</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header-main">
@@ -27,39 +27,51 @@
 				<form action="https://echo.htmlacademy.ru" class="wrapper">
 					
 					<fieldset class="filters__infrastructure">
-						<legend class="filters__title">Инфраструктура:</legend>
-						<label>
-							<input type="checkbox" name="pool" checked> 
-							Бассейн
-						</label>
-						<label>
-							<input type="checkbox" name="parking-area"> 
-							Парковка
-						</label>
-						<label>
-							<input type="checkbox" name="wi-fi"> 
-							Wi-Fi
-						</label>
+						<legend class="filters__title">Инфраструктура:</legend>						
+							<input class="visually-hidden" type="checkbox" id="pool" name="pool" checked>
+							<label for="pool">Бассейн</label>
+
+							<input class="visually-hidden" type="checkbox" id="parking-area" name="parking-area">
+							<label for="parking-area">Парковка</label>
+							
+							<input class="visually-hidden" type="checkbox" id="wi-fi" name="wi-fi">
+							<label for="wi-fi">Wi-Fi</label>
 					</fieldset>
 
 					<fieldset class="filters__type-hotel">
 						<legend class="filters__title">Тип жилья:</legend>
-						<label>
-							<input type="checkbox" name="hotel" checked> 
-							Гостиница
-						</label>
-						<label>
-							<input type="checkbox" name="motel" checked> 
-							Мотель
-						</label>
-						<label>
-							<input type="checkbox" name="apartments" checked> 
-							Апартаменты
-						</label>
+							<input class="visually-hidden" type="checkbox" id="hotel" name="hotel" checked> 
+							<label for="hotel">Гостиница</label>
+						
+							<input class="visually-hidden" type="checkbox" id="motel" name="motel" checked> 
+							<label for="motel">Мотель</label>
+							
+							<input class="visually-hidden" type="checkbox" id="apartments" name="apartments" checked> 
+							<label for="apartments">Апартаменты</label>
 					</fieldset>
 
 					<fieldset  class="filters__price">
 						<legend class="filters__title">Стоимость в сутки (Р):</legend>
+
+						<div class="filters__price-input">
+							<div class="price-wrapper">
+								<label class="price-min" for="price-min">от </label>
+								<input type="text" name="price-min" id="price-min" value="0" pattern="^[ 0-9]+$">
+							</div>
+							<div class="price-wrapper">
+								<label class="price-max" for="price-max">до </label>
+								<input type="text" name="price-max" id="price-max" value="3000" pattern="^[ 0-9]+$">
+							</div>
+						</div>
+						<div class="filter__range">
+							<div class="filter__range-scale">
+								<div class="filter__range-bar"></div>
+							</div>
+							<div class="filter__range-toggle filter__range-toggle_min"></div>
+							<div class="filter__range-toggle filter__range-toggle_max"></div>
+						</div>
+						
+						<!--
 						<p class="filter__price">
 							<input type="text" name="price-min" placeholder="от 0" pattern="^[ 0-9]+$">
 							<input type="text" name="price-max" placeholder="до 3000" pattern="^[ 0-9]+$">
@@ -67,7 +79,7 @@
 						<p class="filter__range">
 							<input type="range" value="0">
 							<input type="range" value="3000">
-						</p>						
+						</p>-->
 						<button class="btn btn-filter" type="submit">Показать</button>
 					</fieldset>
 					
@@ -85,8 +97,8 @@
 						<a class="btn-sort" href="#">по рейтингу</a>
 					</div>
 					<div class="sorting__dir">
-						<a class="btn-sort-dir" href="#">по возрастанию</a>
-						<a class="btn-sort-dir btn-sort-dir_active" href="#">по убыванию</a>
+						<a class="btn-sort-dir" href="#"><span class="visually-hidden">сортировать по возрастанию</span></a>
+						<a class="btn-sort-dir btn-sort-dir_active" href="#"><span class="visually-hidden">сортировать по убыванию</span></a>
 					</div>
 				</div>
 			</section>
@@ -107,7 +119,13 @@
 								<a class="btn btn-reservation" href="#">Забронировать</a>
 							</div>
 							<div class="hotel__ratings">
-								<p class="hotel__stars hotel__stars_4">4 звезд</p>
+								<p class="hotel__stars">
+									<span class="visually-hidden">4 звезды</span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</p>
 								<p class="hotel__rating">Рейтинг: 8,5</p>
 							</div>
 						</div>
@@ -126,7 +144,12 @@
 								<a class="btn btn-reservation" href="#">Забронировать</a>
 							</div>
 							<div class="hotel__ratings">
-								<p class="hotel__stars hotel__stars_3">3 звезд</p>
+								<p class="hotel__stars">
+									<span class="visually-hidden">3 звезды</span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</p>
 								<p class="hotel__rating">Рейтинг: 8,9</p>
 							</div>
 						</div>
@@ -145,7 +168,11 @@
 								<a class="btn btn-reservation" href="#">Забронировать</a>
 							</div>
 							<div class="hotel__ratings">
-								<p class="hotel__stars hotel__stars_2">2 звезд</p>
+								<p class="hotel__stars">
+									<span class="visually-hidden">2 звезды</span>
+									<span></span>
+									<span></span>
+								</p>
 								<p class="hotel__rating">Рейтинг: 9,2</p>
 							</div>
 						</div>	
@@ -160,9 +187,9 @@
 			</div>
 
 			<div class="footer-socials">
-				<a class="btn socials-btn socials-btn-tw" href="#">Twitter</a>
-				<a class="btn socials-btn socials-btn-fb" href="#">Facebook</a>
-				<a class="btn socials-btn socials-btn-yt" href="#">Youtube</a>
+				<a class="btn socials-btn socials-btn-tw" href="#" title="Twitter"><span class="visually-hidden">Twitter</span></a>
+				<a class="btn socials-btn socials-btn-fb" href="#" title="Facebook"><span class="visually-hidden">Facebook</span></a>
+				<a class="btn socials-btn socials-btn-yt" href="#" title="Youtube"><span class="visually-hidden">Youtube</span></a>
 			</div>
 
 			<div class="footer-copyright">
