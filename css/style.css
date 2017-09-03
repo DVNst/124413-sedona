@@ -75,7 +75,8 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-main:focus {
-	outline: 1px dotted #4d90fe;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
 }
 
 .logo-main img {
@@ -424,7 +425,6 @@ main {
 }
 
 .search-form input {
-	outline: none;
 	height: 38px;
 	box-sizing: border-box;
 
@@ -869,7 +869,8 @@ input[type="checkbox"]:checked:disabled + label {
 	cursor: auto;
 }
 input[type="checkbox"]:focus + label {
-	outline: 1px dotted #4d90fe;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
 }
 
 .filters .filters__price {
