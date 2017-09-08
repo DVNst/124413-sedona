@@ -6,6 +6,11 @@ var data_end = search_form.querySelector("[name=data-end]");
 var adult = search_form.querySelector("[name=adult]");
 var child = search_form.querySelector("[name=child]");
 
+var btn_adult_less = search_form.querySelector("[name=btn-adult-less]");
+var btn_adult_more = search_form.querySelector("[name=btn-adult-more]");
+var btn_child_less = search_form.querySelector("[name=btn-child-less]");
+var btn_child_more = search_form.querySelector("[name=btn-child-more]");
+
 var storage_data_begin = localStorage.getItem("data_begin");
 var storage_data_end = localStorage.getItem("data_end");
 var storage_adult = localStorage.getItem("adult");
@@ -33,23 +38,23 @@ btn_search_form.addEventListener("click", function (evt) {
 		}
 
 	data_begin.focus();
-	});
+});
 
 data_begin.addEventListener("focus", function (evt) {
 	data_begin.select();	
-	});
+});
 
 data_end.addEventListener("focus", function (evt) {
 	data_end.select();	
-	});
+});
 
 adult.addEventListener("focus", function (evt) {
 	adult.select();	
-	});
+});
 
 child.addEventListener("focus", function (evt) {
 	child.select();	
-	});
+});
 
 form.addEventListener("submit", function (evt) {
 	if (!data_begin.value || !data_end.value || !adult.value || !child.value  || adult.value<0 || child.value<0) {
@@ -75,3 +80,35 @@ window.addEventListener("keydown", function (evt) {
 		}
 	}
 });
+
+btn_adult_less.addEventListener("click", function (evt) {
+	if (isNaN(adult.value)) {
+		adult.value = 1;
+	} else if (adult.value>0) {
+		adult.value = Number(adult.value) - 1;
+	}
+})
+
+btn_adult_more.addEventListener("click", function (evt) {
+	if (isNaN(adult.value)) {
+		adult.value = 1;
+	} else {
+		adult.value = Number(adult.value) + 1;
+	}
+})
+
+btn_child_less.addEventListener("click", function (evt) {
+	if (isNaN(child.value)) {
+		child.value = 1;
+	} else if (child.value>0) {
+		child.value = Number(child.value) - 1;
+	}
+})
+
+btn_child_more.addEventListener("click", function (evt) {
+	if (isNaN(child.value)) {
+		child.value = 1;
+	} else {
+		child.value = Number(child.value) + 1;
+	}
+})
