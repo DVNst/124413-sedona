@@ -424,7 +424,7 @@ main {
 }
 
 .search-form {
-	display: none;
+	/*display: none;*/
 	position: absolute;
 	padding-top: 55px;
 	padding-right: 55px;
@@ -444,6 +444,10 @@ main {
 	z-index: 10;
 
 	background-color: #ffffff;
+}
+
+.search-form-hide {
+	display: none;
 }
 
 .search-form-show {

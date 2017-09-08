@@ -16,6 +16,10 @@ var storage_data_end = localStorage.getItem("data_end");
 var storage_adult = localStorage.getItem("adult");
 var storage_child = localStorage.getItem("child");
 
+window.onload = function() {
+	search_form.classList.add("search-form-hide");
+};
+
 btn_search_form.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	search_form.classList.toggle("search-form-show");
@@ -37,7 +41,7 @@ btn_search_form.addEventListener("click", function (evt) {
 		child.value = localStorage.getItem("child");
 		}
 
-	data_begin.focus();
+	setTimeout("data_begin.focus()", 100);
 });
 
 data_begin.addEventListener("focus", function (evt) {
@@ -59,9 +63,8 @@ child.addEventListener("focus", function (evt) {
 form.addEventListener("submit", function (evt) {
 	if (!data_begin.value || !data_end.value || !adult.value || !child.value  || adult.value<0 || child.value<0) {
 		evt.preventDefault();
-		console.log("ddd");
 		search_form.classList.remove("search-form-error");
-    search_form.offsetWidth = search_form.offsetWidth;
+    	search_form.offsetWidth = search_form.offsetWidth;
 		search_form.classList.add("search-form-error");
 	} else {
 		evt.preventDefault();
