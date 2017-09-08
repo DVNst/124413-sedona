@@ -99,7 +99,7 @@ btn_adult_more.addEventListener("click", function (evt) {
 
 btn_child_less.addEventListener("click", function (evt) {
 	if (isNaN(child.value)) {
-		child.value = 1;
+		child.value = 0;
 	} else if (child.value>0) {
 		child.value = Number(child.value) - 1;
 	}
