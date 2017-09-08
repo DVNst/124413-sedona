@@ -12,8 +12,6 @@ var storage_adult = localStorage.getItem("adult");
 var storage_child = localStorage.getItem("child");
 
 btn_search_form.addEventListener("click", function (evt) {
-	localStorage.clear();
-
 	evt.preventDefault();
 	search_form.classList.toggle("search-form-show");
 
