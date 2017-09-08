@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>HTML Academy: Седона</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style-min.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
 	</head>
 	<body>
@@ -109,54 +109,56 @@
 				
 			</section>
 
-			<section class="search-form">
-				<h2 class="visually-hidden">Форма поиска гостиниц в Седоне</h2>
-				<form method="get">
-					<fieldset class="search-form__data">
-						<div class="search-form-wrapper">
-							<label for="data-begin">Дата заезда:</label>
-							<p class="search-form__input">
-								<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
-								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
-							</p>
-						</div>
-						
-						<div class="search-form-wrapper">
-							<label for="data-end">Дата выезда:</label>
-							<p class="search-form__input">
-								<input type="text" id="data-end" name="data-end" value="4 июля 2017">
-								<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
-							</p>
-						</div>
-						
-					</fieldset>
+			<section class="search-form-container">
+				<div class="search-form">
+					<h2 class="visually-hidden">Форма поиска гостиниц в Седоне</h2>
+					<form method="get" action="https://echo.htmlacademy.ru">
+						<fieldset class="search-form__data">
+							<div class="search-form-wrapper">
+								<label for="data-begin">Дата заезда:</label>
+								<p class="search-form__input">
+									<input type="text" id="data-begin" name="data-begin" value="24 апреля 2017">
+									<button type="button" value="data-begin" name="btn-data-begin" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
+								</p>
+							</div>
+							
+							<div class="search-form-wrapper">
+								<label for="data-end">Дата выезда:</label>
+								<p class="search-form__input">
+									<input type="text" id="data-end" name="data-end" value="4 июля 2017">
+									<button type="button" value="data-end" name="btn-data-end" class="search-form__btn-calendar"><span class="visually-hidden">Календарь</span></button>
+								</p>
+							</div>
+							
+						</fieldset>
 
-					<fieldset class="search-form__passenger">
-						<div class="search-form-wrapper">
-							<label for="adult">Взрослые:</label>
-							<p class="search-form__input">
-								<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">
-									<span class="visually-hidden">Уменьшить взрослых</span>
-								</button>
-								<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
-								<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">
-									<span class="visually-hidden">Увеличить взрослых</span>
-								</button>
-							</p>
-							<label for="child">Дети:</label>
-							<p class="search-form__input">
-								<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">
-									<span class="visually-hidden">Уменьшить детей</span>
-								</button>
-								<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
-								<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">
-									<span class="visually-hidden">Увеличить детей</span>
-								</button>
-							</p>
-						</div>
-					</fieldset>
-					<button class="btn btn-form" type="submit">Найти</button>
-				</form>
+						<fieldset class="search-form__passenger">
+							<div class="search-form-wrapper">
+								<label for="adult">Взрослые:</label>
+								<p class="search-form__input">
+									<button type="button" value="adult" name="btn-adult-less" class="search-form__btn-passenger search-form__btn-passenger_less">
+										<span class="visually-hidden">Уменьшить взрослых</span>
+									</button>
+									<input type="text" id="adult" name="adult" value="2" pattern="^[ 0-9]+$">
+									<button type="button" value="adult" name="btn-adult-more" class="search-form__btn-passenger search-form__btn-passenger_more">
+										<span class="visually-hidden">Увеличить взрослых</span>
+									</button>
+								</p>
+								<label for="child">Дети:</label>
+								<p class="search-form__input">
+									<button type="button" value="child" name="btn-child-less" class="search-form__btn-passenger search-form__btn-passenger_less">
+										<span class="visually-hidden">Уменьшить детей</span>
+									</button>
+									<input type="text" id="child" name="child" value="0" pattern="^[ 0-9]+$">
+									<button type="button" value="child" name="btn-child-more" class="search-form__btn-passenger search-form__btn-passenger_more">
+										<span class="visually-hidden">Увеличить детей</span>
+									</button>
+								</p>
+							</div>
+						</fieldset>
+						<button class="btn btn-form" type="submit">Найти</button>
+					</form>
+				</div>
 			</section>
 
 			<section class="map">
@@ -187,6 +189,8 @@
 			</div>
 			
 		</footer>
+
+		<script src="js/search-form.js"></script>
 		
 	</body>
 </html>
