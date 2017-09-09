@@ -726,13 +726,17 @@ main {
 	background-size: cover;	
 }
 
+.map-img iframe {
+	border: none;
+}
+
 .footer-main {
-	bottom: 0;
+	position: relative;
+}
 
+.footer-container {
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -749,11 +753,14 @@ main {
 
 	color: #000000;
 
-	background-color: rgba(254,254,254,0.9);
+	background-color: #ffffff;
 }
 
 .footer-index {
 	position: absolute;
+	bottom: 0;
+
+	background-color: rgba(254,254,254,0.9);
 }
 
 .footer-main div {
