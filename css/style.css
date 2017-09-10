@@ -223,6 +223,8 @@ main {
 
 .features__head p {
 	margin: 0;
+
+	color: #333333;
 }
 
 .features__item {
@@ -287,6 +289,10 @@ main {
 	background-color: #ffffff;
 }
 
+.features__title_white p{
+	color: #333333;
+}
+
 .features__title_white::before {
 	content: "";
 	position: absolute;
@@ -348,6 +354,10 @@ main {
 	background-color: #eeeeee;
 }
 
+.features__title_grey {
+	color: #333333;
+}
+
 .features__item:nth-child(2) .features__img {
 	background: #b6d0e4 url("../img/features1.jpg") no-repeat 0 54%;
 	background-size: cover;
@@ -387,6 +397,7 @@ main {
 	
 	font-size: 14px;
 	line-height: 24px;
+	color: #333333;
 }
 
 .btn-search-form {
@@ -727,6 +738,9 @@ main {
 }
 
 .map-img iframe {
+	height: 593px;
+	width: 100%;
+
 	border: none;
 }
 
@@ -964,6 +978,8 @@ input[type="checkbox"] + label {
 	margin-bottom: 20px;
 	padding-left: 40px;
 
+	display: block;
+
 	cursor: pointer;
 }
 
@@ -1190,11 +1206,19 @@ input[type="checkbox"]:focus + label {
 }*/
 
 .btn-filter {
-	margin: 32px auto 0;
-	padding: 5px 34px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-left: 85px;
+	margin-left: 27%;
+	margin-right: auto;
+	margin-right: 96px;
+	margin-right: 30%;
+	margin-bottom: 0;
+	padding: 5px 32px;
 
-	/*width: 137px;*/
-	
+	display: block;
+
+	/*width: 137px;*/	
 
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-weight: normal;
@@ -1376,13 +1400,27 @@ input[type="checkbox"]:focus + label {
 	height: 90px;
 }
 
-.hotels__item h3 {
+.hotels__name {
 	margin: 0;
 	margin-bottom: 6px;
 
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
+}
+
+.hotels__name a {
+	color: #000000;
+}
+
+.hotels__name a:hover,
+.hotels__name a:focus {
+	color: #81b3d2;
+}
+
+.hotels__name a:active {
+	color: #000000;
+	opacity: 0.3;
 }
 
 .hotels__type-price {
