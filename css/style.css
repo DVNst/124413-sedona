@@ -230,15 +230,21 @@ main {
 .features__item {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;	
+	display: flex;
 }
 
 .col-x1 {
 	width: 33%;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 
 .col-x2 {
-	width: 67%;
+	width: 66%;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 
 .features__title {
@@ -279,10 +285,7 @@ main {
 .features__title_white {
 	padding-top: 161px;
 	padding-bottom: 61px;
-	margin: 0;
-	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
+	margin: 0;	
 
 	color: #000000;
 
@@ -345,10 +348,6 @@ main {
 }
 
 .features__title_grey {
-	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
-
 	color: #000000;
 	
 	background-color: #eeeeee;
